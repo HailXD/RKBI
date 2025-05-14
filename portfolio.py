@@ -54,7 +54,7 @@ def process_image(img):
     return result_img
 
 
-image_url = "https://cdn.discordapp.com/attachments/1352311755682091111/1372248573240021022/IMG_1489.png?ex=68261593&is=6824c413&hm=59996942ff469693536152dc6e51eb2a6d24778027d63ec252d2bffaa11444d7&"
+image_url = "https://media.discordapp.net/attachments/1352311755682091111/1372248573240021022/IMG_1489.png?ex=68261593&is=6824c413&hm=59996942ff469693536152dc6e51eb2a6d24778027d63ec252d2bffaa11444d7&="
 img = load_image_from_url(image_url)
 processed_img = process_image(img)
 
