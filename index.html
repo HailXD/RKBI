@@ -260,9 +260,9 @@ def process_image_1_py(image_bytes_py):
         actual_insert_row_607 = min(insert_row_607_target, img_array_current.shape[0])
 
         img_array_current = np.insert(img_array_current, actual_insert_row_607, [171, 170, 175], axis=0)
-        for _ in range(8):
-            img_array_current = np.insert(img_array_current, actual_insert_row_607 + 1, [24, 25, 30], axis=0)
-        img_array_current = np.insert(img_array_current, actual_insert_row_607 + 9, [70, 71, 77], axis=0)
+        # for _ in range(8):
+        #     img_array_current = np.insert(img_array_current, actual_insert_row_607 + 1, [24, 25, 30], axis=0)
+        # img_array_current = np.insert(img_array_current, actual_insert_row_607 + 9, [70, 71, 77], axis=0)
         
         # Deletion based on 'start_row_ref'
         # These indices refer to positions in the *current* state of img_array_current
@@ -280,7 +280,7 @@ def process_image_1_py(image_bytes_py):
 
         # Re-insertion of 'rows_deleted_count' rows
         # These indices also refer to positions in the *current* state of img_array_current
-        for i in range(rows_deleted_count):
+        for i in range(rows_deleted_count + 9):
             current_height_before_reinsert = img_array_current.shape[0]
             insert_idx_reinsert = min(start_row_ref + i, current_height_before_reinsert)
             img_array_current = np.insert(img_array_current, insert_idx_reinsert, consecutive_row_color, axis=0)
